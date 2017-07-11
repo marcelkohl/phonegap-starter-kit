@@ -7,7 +7,7 @@ This pack covers the use of:
 - Setup icons, descriptions, authoring of a mobile app (config.xml);
 - Folders structure;
 - Use of plugins (battery plugin on this example);
-- Use of third part Javascript libs (bootstrap, bootbox);
+- Use of third party Javascript libs (bootstrap, bootbox);
 - Sample of custom elements (switches, checkboxes);
 - Default responsive window with menu;
 - Use of theme;
