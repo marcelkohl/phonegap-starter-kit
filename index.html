@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>This app title</title>
+        <script type="text/javascript" src="libs/jquery/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="libs/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="libs/bootbox/bootbox.min.js"></script>
+
+        <link rel="stylesheet" href="libs/bootstrap/yeti.bootstrap.min.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/switch.css">
+        <link rel="stylesheet" href="css/magic-check.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">App name</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#" onclick="showAbout()">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Default</a></li>
+                <li><a href="#">Another</a></li>
+                <li class="active"><a href="./">Selected Option <span class="sr-only">(current)</span></a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+
+        <div class="container space-for-top-navbar">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Battery Information</h3>
+              </div>
+              <div class="panel-body" id="battery-info">
+                loading...
+              </div>
+            </div>
+
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="badge">14</span>
+                Cras justo odio
+              </li>
+              <li class="list-group-item">
+                <span class="badge">2</span>
+                Dapibus ac facilisis in
+              </li>
+              <li class="list-group-item">
+                <span class="badge">1</span>
+                Morbi leo risus
+              </li>
+            </ul>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Material Design Switch Demos</div>
+
+                        <!-- List group -->
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                Bootstrap Switch Default
+                                <div class="material-switch pull-right">
+                                    <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                    <label for="someSwitchOptionDefault" class="label-default"></label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                Bootstrap Switch Primary
+                                <div class="material-switch pull-right">
+                                    <input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox"/>
+                                    <label for="someSwitchOptionPrimary" class="label-primary"></label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                Bootstrap Switch Success
+                                <div class="material-switch pull-right">
+                                    <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
+                                    <label for="someSwitchOptionSuccess" class="label-success"></label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                Bootstrap Switch Info
+                                <div class="material-switch pull-right">
+                                    <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox" checked/>
+                                    <label for="someSwitchOptionInfo" class="label-info"></label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                Bootstrap Switch Warning
+                                <div class="material-switch pull-right">
+                                    <input id="someSwitchOptionWarning" name="someSwitchOption001" type="checkbox"/>
+                                    <label for="someSwitchOptionWarning" class="label-warning"></label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                Bootstrap Switch Danger
+                                <div class="material-switch pull-right">
+                                    <input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
+                                    <label for="someSwitchOptionDanger" class="label-danger"></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Radio and Checkbox Demos</div>
+
+                        <!-- List group -->
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                Checkbox
+                                <div class="pull-right">
+                                    <input class="magic-checkbox" type="checkbox" name="layout" id="1" value="option">
+                                    <label class="text" for="1">Checkbox</label>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item">
+                                Radio
+                                <div class="pull-right">
+                                    <input class="magic-radio" type="radio" name="radio" id="2" value="option">
+                                    <label for="2">Radio button</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+       <script type="text/javascript" src="cordova.js"></script>
+       <script type="text/javascript" src="js/functions.js"></script>
+       <script type="text/javascript">
+           document.addEventListener("deviceready", function () {
+               window.addEventListener("batterystatus", onBatteryStatus, true);
+            }, false);
+
+            // sample use of the battery plugin
+            function onBatteryStatus(status) {
+                $('#battery-info').html(status.level+'%');
+            }
+       </script>
+
+    </body>
+</html>
